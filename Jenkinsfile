@@ -16,7 +16,7 @@ pipeline {
         parallel(
           "TU": {
             sh 'mvn test'
-            junit 'build/**/*.xml'
+            junit 'target/surefire-reports/**/*.xml'
             
           },
           "TF": {
